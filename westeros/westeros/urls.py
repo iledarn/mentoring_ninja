@@ -20,6 +20,11 @@ from ninja import NinjaAPI
 from lannister.api import router as lannister_router
 
 
+api = NinjaAPI()
+api.add_router("/lannister/", lannister_router)
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/", api.urls),
 ]
