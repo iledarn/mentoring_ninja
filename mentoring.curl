@@ -5,4 +5,6 @@ curl http://localhost:8002/api/lannister/rock?height=650
 curl http://localhost:8002/api/lannister/rock/650
 
 
-curl http://localhost:8002/api/targaryen/dragons
+curl http://localhost:8002/api/targaryen/dragons | python -m json.tool
+
+curl -s http://localhost:8002/api/targaryen/dragons | jq "."
