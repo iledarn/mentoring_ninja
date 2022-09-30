@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'westeros.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ["POSTGRES_DB"],
+        'USER': os.environ["POSTGRES_USER"],
+        'PASSWORD': os.environ["POSTGRES_PASSWORD"],
+        'HOST': os.environ["DATABASE_HOST"],  # <-- IMPORTANT: same name as docker-compose service!
+        'PORT': os.environ["DATABASE_PORT"],
     }
 }
 
