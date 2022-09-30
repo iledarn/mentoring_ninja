@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   django:
-    container_name: django
+    container_name: westeros
     build: ./westeros
     image: westeros
     env_file:
