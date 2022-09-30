@@ -8,5 +8,7 @@ class DragonOut(Schema):
 
 
 class PersonOut(ModelSchema):
+    first_name: str
     class Config:
         model = Person
+        model_fields = ["id", "birth_year"]
