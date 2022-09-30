@@ -1,1 +1,3 @@
 curl http://localhost:8002/api/lannister/home
+
+curl http://localhost:8002/api/lannister/rock?height=650
