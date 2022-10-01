@@ -8,3 +8,6 @@ curl http://localhost:8002/api/lannister/rock/650
 curl http://localhost:8002/api/targaryen/dragons | python -m json.tool
 
 curl -s http://localhost:8002/api/targaryen/dragons | jq "."
+
+
+curl s http://localhost:8002/api/targaryen/person/1 | jq "."
